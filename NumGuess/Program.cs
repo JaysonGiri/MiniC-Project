@@ -9,8 +9,12 @@ namespace NumberGuesser
         // Entry Point Method
         static void Main(string[] args)
         {
+            string name = "Sanjay";
+            int age = 21;
+
             // START HERE //
-            Console.Write("Hello World");
+            // Console.WriteLine(name + " is " + age);
+            Console.WriteLine("{0} is {1}", name, age);     
         }
     }
 }
