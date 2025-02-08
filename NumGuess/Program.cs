@@ -66,25 +66,29 @@ namespace NumberGuesser
                 // Print success message
                 PrintColorMessage(ConsoleColor.Yellow, "You are CORRECT!!! You guessed it!");
 
-
-                // Ask to play again
-                Console.WriteLine("Play Again? [Y or N]");
-
-                // Get answer
-                string answer = Console.ReadLine().ToUpper();
-
-
-                if (answer == "Y")
+                while (true)
                 {
-                    continue;
-                }
-                else if (answer == "N")
-                {
-                    return;
-                }
-                else
-                {
-                    return; 
+                    // Ask to play again
+                    Console.WriteLine("Play Again? [Y or N]");
+
+                    // Get answer
+                    string answer = Console.ReadLine().ToUpper();
+
+
+                    if (answer == "Y")
+                    {
+                        break;
+                    }
+                    else if (answer == "N")
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        // Print success message
+                        PrintColorMessage(ConsoleColor.Cyan, "Incorrect answer, Please answer Yes or No...");
+                        continue;
+                    }
                 }
 
             }
